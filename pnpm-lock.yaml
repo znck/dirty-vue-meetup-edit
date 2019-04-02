@@ -1,0 +1,58 @@
+dependencies:
+  '@vue/ui': 0.7.2
+  vue: 2.6.10
+devDependencies:
+  prettier: 1.16.4
+lockfileVersion: 5
+packages:
+  /@vue/ui/0.7.2:
+    dependencies:
+      focus-visible: 4.1.5
+      v-tooltip: 2.0.0-rc.33
+      vue-resize: 0.4.5
+    dev: false
+    peerDependencies:
+      vue: ^2.5.13
+    resolution:
+      integrity: sha512-LDhPgumKVeVSFpfLlrKOpbWPJB8pAacsBGEYLifOSNpEQhSZDTA7cMAfZ35GkXnrfUh3tovne0X+KyBewz3pOg==
+  /focus-visible/4.1.5:
+    dev: false
+    resolution:
+      integrity: sha512-yo/njtk/BB4Z2euzaZe3CZrg4u5s5uEi7ZwbHBJS2quHx51N0mmcx9nTIiImUGlgy+vf26d0CcQluahBBBL/Fw==
+  /lodash.merge/4.6.1:
+    dev: false
+    resolution:
+      integrity: sha512-AOYza4+Hf5z1/0Hztxpm2/xiPZgi/cjMqdnKTUWTBSKchJlxXXuUSxCCl8rJlf4g6yww/j6mA8nC8Hw/EZWxKQ==
+  /popper.js/1.14.7:
+    dev: false
+    resolution:
+      integrity: sha512-4q1hNvoUre/8srWsH7hnoSJ5xVmIL4qgz+s4qf2TnJIMyZFUFMGH+9vE7mXynAlHSZ/NdTmmow86muD0myUkVQ==
+  /prettier/1.16.4:
+    dev: true
+    engines:
+      node: '>=4'
+    hasBin: true
+    resolution:
+      integrity: sha512-ZzWuos7TI5CKUeQAtFd6Zhm2s6EpAD/ZLApIhsF9pRvRtM1RFo61dM/4MSRUA0SuLugA/zgrZD8m0BaY46Og7g==
+  /v-tooltip/2.0.0-rc.33:
+    dependencies:
+      lodash.merge: 4.6.1
+      popper.js: 1.14.7
+      vue-resize: 0.4.5
+    dev: false
+    resolution:
+      integrity: sha1-ePfY6cNCZWIr5lup3HjGfx3AK3M=
+  /vue-resize/0.4.5:
+    dev: false
+    peerDependencies:
+      vue: ^2.3.0
+    resolution:
+      integrity: sha512-bhP7MlgJQ8TIkZJXAfDf78uJO+mEI3CaLABLjv0WNzr4CcGRGPIAItyWYnP6LsPA4Oq0WE+suidNs6dgpO4RHg==
+  /vue/2.6.10:
+    dev: false
+    resolution:
+      integrity: sha512-ImThpeNU9HbdZL3utgMCq0oiMzAkt1mcgy3/E6zWC/G6AaQoeuFdsl9nDhTDU3X1R6FK7nsIUuRACVcjI+A2GQ==
+specifiers:
+  '@vue/ui': ^0.7.2
+  prettier: ^1.16.4
+  vue: ^2.6.10

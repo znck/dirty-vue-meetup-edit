@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://dirty-vue-meetup-edit.surge.sh/meetup.json",
+  "title": "Meetups by Month",
+  "type": "object",
+  "definitions": {
+    "meetup": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "title": "Day of the month",
+          "type": "string",
+          "description": "e.g. 1st or 3rd or 10th"
+        },
+        "time": {
+          "title": "Event starts at",
+          "type": "string"
+        },
+        "startDate": {
+          "title": "Start Date",
+          "type": "string",
+          "format": "date"
+        },
+        "endDate": {
+          "title": "End Date",
+          "type": "string",
+          "format": "date"
+        },
+        "organiser": {
+          "title": "Organiser",
+          "type": "string"
+        },
+        "organiserLink": {
+          "title": "Organiser Website",
+          "type": "string",
+          "format": "url"
+        },
+        "name": {
+          "title": "Event Name",
+          "type": "string"
+        },
+        "eventLink": {
+          "title": "Event Permalink",
+          "type": "string",
+          "format": "url"
+        },
+        "type": {
+          "title": "Event Type",
+          "enum": ["meetup"]
+        }
+      },
+      "required": [
+        "date",
+        "time",
+        "startDate",
+        "endDate",
+        "organiser",
+        "organiserLink",
+        "name",
+        "eventLink",
+        "type"
+      ]
+    }
+  },
+  "propertyNames": {
+    "enum": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ]
+  },
+  "additionalProperties": {
+    "type": "array",
+    "title": "Meetups of the month",
+    "items": {
+      "$ref": "#/definitions/meetup"
+    }
+  }
+}

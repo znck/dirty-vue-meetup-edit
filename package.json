@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "devDependencies": {
+    "prettier": "^1.16.4"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false,
+    "trailingComma": "es5"
+  },
+  "dependencies": {
+    "vue": "^2.6.10"
+  }
+}
