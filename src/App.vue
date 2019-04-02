@@ -54,6 +54,8 @@ export default {
       return JSON.stringify(this.json, null, 2)
     },
     fullStr() {
+      if (!this.current) return
+
       const startDate = new Date(`${this.meetup.startDate} ${this.meetup.time}`)
       const month = months[startDate.getMonth()]
       const copy = JSON.parse(
@@ -141,7 +143,9 @@ export default {
 
       <pre><code>{{ jsonStr }}</code></pre>
 
-      <textarea :value="fullStr" ref="textarea" />
+      <h3><a href="https://github.com/vuejs/events/edit/master/src/.vuepress/data/2019.json" target="_blank" rel="noopener">Create PR</a> with following event.json</h3>
+      <textarea v-if="this.current" :value="fullStr" ref="textarea" />
+      <div v-else>Fetching latest version of events.json</div>
     </main>
   </div>
 </template>
@@ -199,5 +203,6 @@ pre {
 
 textarea {
   width: 100%;
+  height: 200px;
 }
 </style>
