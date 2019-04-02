@@ -143,10 +143,14 @@ export default {
 
       <pre><code>{{ jsonStr }}</code></pre>
 
-      <h3><a href="https://github.com/vuejs/events/edit/master/src/.vuepress/data/2019.json" target="_blank" rel="noopener">Create PR</a> with following event.json</h3>
+      <h3><a href="https://github.com/vuejs/events/edit/master/src/.vuepress/data/2019.json" target="_blank" rel="noopener noreferrer">Create PR</a> with following event.json</h3>
       <textarea v-if="this.current" :value="fullStr" ref="textarea" />
       <div v-else>Fetching latest version of events.json</div>
     </main>
+
+    <footer>
+      Built with Vue | <a href="https://github.com/znck/dirty-vue-meetup-edit" target="_blank" rel="noopener noreferrer">Contribute/Clone</a>
+    </footer>
   </div>
 </template>
 
@@ -204,5 +208,11 @@ pre {
 textarea {
   width: 100%;
   height: 200px;
+}
+
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.75rem;
 }
 </style>
