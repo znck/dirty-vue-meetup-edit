@@ -29,9 +29,15 @@ export default {
   },
 
   computed: {
+    startDate() {
+      const d = new Date(`${this.meetup.startDate}T${this.meetup.time}:00Z`)
+
+      return new Date(d.getTime() + d.getTimezoneOffset() * 60 * 1000)
+    },
     json() {
       /** @type {Date} */
-      const startDate = new Date(`${this.meetup.startDate} ${this.meetup.time}`)
+      const startDate = this.startDate
+      console.log(this.meetup) // eslint-disable-line
       const date = startDate.getDate()
       const dateStr = `${date}${
         date % 10 === 1
@@ -56,7 +62,7 @@ export default {
     fullStr() {
       if (!this.current) return
 
-      const startDate = new Date(`${this.meetup.startDate} ${this.meetup.time}`)
+      const startDate = this.startDate
       const month = months[startDate.getMonth()]
       const copy = JSON.parse(
         JSON.stringify(this.current)
